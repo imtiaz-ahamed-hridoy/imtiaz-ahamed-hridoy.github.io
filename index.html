@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md. Imtiaz Ahamed — Laravel Backend Developer | Resume</title>
+  <meta name="description" content="Resume of Md. Imtiaz Ahamed - Laravel Backend Developer specializing in high-throughput REST APIs, payment gateways (Stripe, PayPal, Paddle), Redis optimization, and microservice architecture.">
+  <meta property="og:title" content="Md. Imtiaz Ahamed — Laravel Backend Developer">
+  <meta property="og:description" content="Production-tested Laravel Backend Developer with experience across 5 live systems, 18 API integrations, and 425 passing automated tests.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #64748b;
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --border: #e2e8f0;
+      --border-accent: #cbd5e1;
+      --tag-bg: #f1f5f9;
+      --tag-text: #1e293b;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: 3rem 3.5rem;
+      position: relative;
+    }
+
+    /* Floating Header Action Bar */
+    .action-bar {
+      position: fixed;
+      top: 1rem;
+      right: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      z-index: 100;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+      border: 1px solid var(--primary-dark);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background-color: #ffffff;
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      background-color: #f1f5f9;
+      transform: translateY(-1px);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+    }
+
+    .headline {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .contact-links a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .contact-links a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: 2.25rem;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Skills Grid */
+    .skills-list {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .skill-category {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .skill-label {
+      font-weight: 700;
+      color: var(--text-main);
+      display: inline-block;
+      min-width: 175px;
+    }
+
+    .skill-items {
+      color: var(--text-muted);
+    }
+
+    /* Experience & Projects Items */
+    .timeline-item {
+      margin-bottom: 1.75rem;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .item-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .item-date {
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: var(--text-subtle);
+      background: var(--tag-bg);
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+    }
+
+    .item-links {
+      font-size: 0.825rem;
+      color: var(--text-subtle);
+      margin-bottom: 0.35rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .item-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .item-links a:hover {
+      text-decoration: underline;
+    }
+
+    .project-summary {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--text-subtle);
+      margin-bottom: 0.5rem;
+      background: #f8fafc;
+      padding: 0.3rem 0.6rem;
+      border-left: 3px solid var(--primary);
+      border-radius: 0 4px 4px 0;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.885rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+      line-height: 1.55;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    code {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 0.8em;
+      background: #f1f5f9;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      color: #0f172a;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 0.95rem; margin-top: 1rem; }
+      .timeline-item { margin-bottom: 1rem; }
+      li { font-size: 8pt; margin-bottom: 0.2rem; }
+      p { font-size: 8.5pt; }
+      .project-summary { font-size: 8pt; padding: 0.15rem 0.4rem; }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 1.5rem;
+      }
+      .action-bar {
+        position: static;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      .skill-label {
+        display: block;
+        margin-bottom: 0.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <div class="action-bar">
+    <a href="javascript:window.print()" class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      Print / Save PDF
+    </a>
+    <a href="https://github.com/imtiaz-ahamed-hridoy" target="_blank" class="btn btn-outline">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      GitHub
+    </a>
+  </div>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>MD. IMTIAZ AHAMED</h1>
+      <div class="headline">Laravel Backend Developer | PHP, Laravel, REST APIs &amp; Payment Systems</div>
+      <div class="contact-links">
+        <span>📍 Dhaka, Bangladesh</span>
+        <span>•</span>
+        <span>📞 +880 1315-859059</span>
+        <span>•</span>
+        <a href="mailto:imtiazahmed6265@gmail.com">✉️ imtiazahmed6265@gmail.com</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/imtiaz-ahamed-hridoy" target="_blank">LinkedIn</a>
+        <span>•</span>
+        <a href="https://github.com/imtiaz-ahamed-hridoy" target="_blank">GitHub</a>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Laravel Backend Developer with production experience engineering five live web systems at Softvence IT Ltd across travel technology, music education SaaS, AI video generation, villa booking, and service marketplaces. Delivered high-throughput RESTful APIs serving 100,000+ travel products, integrated 18 third-party APIs (Stripe, PayPal, Paddle, GlobalTix, Bókun, OpenAI GPT-4o), and built idempotent payment workflows with automated CI/CD deployment pipelines. Maintained 425 passing automated tests on production SaaS backends and optimized database query architecture to achieve 279ms p50 search latency. Available immediately.
+      </p>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-list">
+        <div class="skill-category">
+          <span class="skill-label">Backend &amp; Architecture:</span>
+          <span class="skill-items">PHP 8.3 / 8.4, Laravel 12, RESTful API Design &amp; Versioning, Eloquent ORM, MVC Architecture, Service-Repository Pattern, SOLID Principles, Queue Workers, Webhook Signature Verification, Idempotent Payment Processing</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Payments &amp; Integrations:</span>
+          <span class="skill-items">Stripe Payments (PaymentIntents, Webhooks), PayPal REST API v2, Paddle Billing v2 (Ed25519 Webhooks), GlobalTix API, Bókun API (HMAC-SHA1 Signing), Firebase Cloud Messaging (FCM), Firebase Auth, RevenueCat, Open Exchange Rates API, Google OAuth, Apple Sign-In</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">AI &amp; Multi-Modal APIs:</span>
+          <span class="skill-items">OpenAI API (GPT-4o, GPT Image 2, Whisper), Google Gemini 2.5 Flash API, Anthropic Claude Sonnet API, Multi-Provider LLM Abstraction, Kling AI API (Motion Control), ElevenLabs API (Voice Cloning), Prompt Engineering, AI-Assisted Development (Antigravity, Gemini)</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Databases &amp; Caching:</span>
+          <span class="skill-items">MySQL 8, Redis (Response Caching, Queue Driver), Row-Level Locking (<code>lockForUpdate</code>), Database Transactions, Composite Indexing, Eager Loading (N+1 Elimination), Memory-Safe Batch Processing (<code>chunk</code>, <code>Bus::batch</code>)</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Frontend &amp; Full-Stack:</span>
+          <span class="skill-items">Blade, Inertia.js, React, Livewire, Alpine.js, Tailwind CSS, Bootstrap, TypeScript, Vite</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Cloud, DevOps &amp; Tools:</span>
+          <span class="skill-items">AWS (EC2, S3), DigitalOcean VPS, Hostinger (VPS &amp; Web Hosting), SiteGround, CloudPanel, cPanel, Linux VPS, Nginx, Supervisor, Cron Scheduling, Docker, Docker Compose, Git, GitHub Actions (CI/CD), Postman, PestPHP</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Familiar with:</span>
+          <span class="skill-items">Flutter (basic, feature-level contributions, AI-assisted)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section>
+      <h2>Work Experience</h2>
+
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">Executive, Laravel &nbsp;|&nbsp; Softvence IT Ltd</div>
+          <div class="item-date">Dec 2025 – Sep 2026 | Dhaka, BD</div>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 0.4rem;"><em>Experience letter available on request</em></div>
+        <ul>
+          <li>Architected and maintained RESTful APIs and backend services for five live production systems across travel technology, SaaS, AI processing, and real-time marketplaces using Laravel 12 and PHP 8.3/8.4.</li>
+          <li>Optimized catalog search performance across 100,000+ travel products by implementing Redis response caching, eager loading, and composite indexes, cutting database roundtrips by 98% (201 to 3 queries) and achieving 279ms p50 (916ms p95) API response latency measured on production.</li>
+          <li>Engineered memory-safe background catalog sync pipelines using selective column projection, chunked batch jobs (<code>Bus::batch</code>), dedicated Supervisor queue workers, and distributed concurrency locks, reducing peak CLI memory from 500MB+ (OOM crash) to &lt;45MB flat.</li>
+          <li>Implemented dual-provider booking workflows (Stripe, PayPal) and subscription billing (Paddle Billing v2) with cryptographic signature validation (HMAC-SHA1, HMAC-SHA256, Ed25519) and row-level locking (<code>lockForUpdate</code>) to guarantee zero duplicate charges and orders on webhook retries.</li>
+          <li>Built a multi-provider AI vision abstraction layer enabling zero-downtime provider swapping between OpenAI GPT-4o, Google Gemini 2.5 Flash, and Anthropic Claude Sonnet without application code changes.</li>
+          <li>Automated CI/CD deployment pipelines using GitHub Actions across DigitalOcean VPS, Hostinger VPS, SiteGround, and cPanel environments, configuring Nginx, Supervisor workers, and Cron schedulers.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">Customer Service Officer &nbsp;|&nbsp; Genex Infosys (Grameenphone)</div>
+          <div class="item-date">Aug 2024 – Apr 2025 | Dhaka, BD</div>
+        </div>
+        <ul>
+          <li>Resolved customer issues using various CRM tools and provided accurate solutions.</li>
+          <li>Handled customer complaints professionally and ensured timely resolution.</li>
+          <li>Maintained strong customer relationships to support brand loyalty.</li>
+          <li>Documented interactions, prepared reports, and supported back-office operations.</li>
+          <li>Ensured compliance with service quality standards and company policies.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">Technical Assistant &nbsp;|&nbsp; Edison Group</div>
+          <div class="item-date">Jan 2023 – Jul 2024 | Dhaka, BD</div>
+        </div>
+        <ul>
+          <li>Maintained and repaired computer hardware systems, including desktops, laptops, and peripherals.</li>
+          <li>Assembled mobile devices from components and performed QA testing to ensure performance and quality standards.</li>
+          <li>Supervised and coordinated technical workers on the assembly line, managing task allocation and productivity.</li>
+          <li>Documented maintenance logs and QA reports, and supported technical audits.</li>
+          <li>Provided basic IT support for network setup, device configuration, and system troubleshooting.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Live & Production Projects -->
+    <section>
+      <h2>Live &amp; Production Projects</h2>
+
+      <!-- ThingsToDoLists -->
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">ThingsToDoLists — Online Travel Agency Experiences Marketplace</div>
+        </div>
+        <div class="item-links">
+          <span>Website: <a href="https://thingstodolists.com" target="_blank">thingstodolists.com</a></span>
+          <span>•</span>
+          <span>Admin: <a href="https://admin.thingstodolists.com" target="_blank">admin.thingstodolists.com</a></span>
+          <span>•</span>
+          <span>GitHub: <a href="https://github.com/imtiaz-ahamed-hridoy/ThingsToDoLists" target="_blank">ThingsToDoLists</a></span>
+        </div>
+        <div class="project-summary">High-scale OTA aggregating multi-supplier catalogs with real-time booking &amp; multi-currency checkout</div>
+        <ul>
+          <li><strong>Catalog Aggregation &amp; Normalization:</strong> Architected a unified travel catalog backend in Laravel 12 ingesting GlobalTix (Asian ticketing) and Bókun (TripAdvisor global tours) APIs across 55 Eloquent models and 148 API routes, managing 100,000+ tour and attraction experiences.</li>
+          <li><strong>Search Latency &amp; N+1 Query Optimization:</strong> Solved database full-table scan bottlenecks by implementing Redis response caching, pre-computed city summaries, and composite indexing, reducing database roundtrips by 98% (201 to 3 queries) and achieving 279ms p50 (916ms p95) latency measured in production.</li>
+          <li><strong>Memory-Safe Batch Pipelines:</strong> Eliminated fatal CLI Out-of-Memory crashes during catalog sync by designing chunked batch jobs (<code>Bus::batch</code>) on an isolated Supervisor <code>sync</code> Redis queue with distributed concurrency locks on DigitalOcean VPS (CloudPanel), keeping RAM flat at &lt;45MB.</li>
+          <li><strong>Idempotent Financial Checkout:</strong> Built multi-currency pricing with automated daily FX sync (Open Exchange Rates API) and dual-gateway checkout (Stripe, PayPal) with HMAC webhook validation and row-level locking (<code>lockForUpdate</code>) to guarantee zero duplicate orders or supplier over-bookings.</li>
+        </ul>
+      </div>
+
+      <!-- NumoniX -->
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">NumoniX — Music Learning SaaS Backend API</div>
+        </div>
+        <div class="item-links">
+          <span>Backend: <a href="https://api.numonix.app" target="_blank">api.numonix.app</a></span>
+          <span>•</span>
+          <span>APK: <a href="https://drive.google.com/file/d/1QqA6ZF0Zi7BSBUHNeUvGhx5DbUezrtpR/view" target="_blank">Google Drive</a></span>
+          <span>•</span>
+          <span>GitHub: <a href="https://github.com/imtiaz-ahamed-hridoy/Numonix-Backend" target="_blank">Numonix-Backend</a></span>
+        </div>
+        <div class="project-summary">Cross-platform music education SaaS with subscription billing and automated curriculum delivery</div>
+        <ul>
+          <li><strong>SaaS API &amp; Recurring Billing:</strong> Built a production REST API (84 endpoints) and Blade admin portal for iOS/Android apps, integrating Paddle Billing v2 with Ed25519 webhook signature validation across three subscription tiers (Free, Tier 1, Tier 2).</li>
+          <li><strong>Automated Founder Lifecycle Engine:</strong> Engineered the Founder Programme trial engine: automated 30-day Tier 2 trial clocks, day-25 expiry reminders, £24.99/year conversion offers, and scheduled cron trial reclassifications.</li>
+          <li><strong>Mission-Critical Test Suite:</strong> Authored and maintained an automated test suite of 425 passing backend tests (1,153 assertions) with 100% pass rate covering authentication, subscription tiers, and webhook idempotency.</li>
+          <li><strong>Infrastructure Storage Sync:</strong> Resolved a critical production avatar 404 defect on SiteGround Nginx by implementing triple-disk upload mirroring (<code>storage/app/public</code>, <code>public/uploads</code>, <code>public/storage</code>), verified by directory sync routines.</li>
+          <li><strong>Mobile Client Integration:</strong> Contributed to the Flutter client: integrated payment/subscription flows, resolved release APK manifest connectivity permissions, and patched client defects (AI-assisted development).</li>
+        </ul>
+      </div>
+
+      <!-- Sinozia -->
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">Sinozia — AI Video Character Swap Platform</div>
+        </div>
+        <div class="item-links">
+          <span>Website: <a href="https://sinozia.com" target="_blank">sinozia.com</a></span>
+          <span>•</span>
+          <span>GitHub: <a href="https://github.com/imtiaz-ahamed-hridoy/Sinozia" target="_blank">Sinozia</a></span>
+        </div>
+        <div class="project-summary">Generative AI video platform transforming videos with AI character swapping and cloned voiceovers</div>
+        <ul>
+          <li><strong>7-Stage Pipeline Orchestration:</strong> Architected the complete AI video processing platform orchestrating a 7-stage automated queue pipeline (FFmpeg frame extraction &rarr; LLM prompt generation &rarr; preview synthesis &rarr; Kling AI video generation &rarr; ElevenLabs voice cloning &rarr; video assembly).</li>
+          <li><strong>Multi-Provider AI Abstraction:</strong> Designed and implemented an enterprise vision abstraction layer using Strategy and Factory patterns, allowing runtime zero-code-change switching between OpenAI GPT-4o, Google Gemini 2.5 Flash, and Anthropic Claude Sonnet via config.</li>
+          <li><strong>Credit Concurrency &amp; Polling:</strong> Built a credit management system with database row-level locking (<code>lockForUpdate</code>) to prevent balance race conditions, automated monthly renewals, and asynchronous polling workers with scheduler auto-recovery on Hostinger VPS (CloudPanel).</li>
+        </ul>
+      </div>
+
+      <!-- Lokaa -->
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">Lokaa — Service Marketplace Platform</div>
+        </div>
+        <div class="item-links">
+          <span>Website: <a href="https://lokaa.uk" target="_blank">lokaa.uk</a></span>
+          <span>•</span>
+          <span>Backend: <a href="https://api.lokaa.uk" target="_blank">api.lokaa.uk</a></span>
+          <span>•</span>
+          <span>GitHub: <a href="https://github.com/imtiaz-ahamed-hridoy/Lokaa" target="_blank">Lokaa</a></span>
+        </div>
+        <div class="project-summary">Two-sided on-demand local services marketplace connecting UK service providers with consumers</div>
+        <ul>
+          <li><strong>Rapid 0-to-1 Marketplace Delivery:</strong> Built and launched a complete service marketplace from scratch in two weeks across 66 API routes (137 route definitions) with service listings, hero search, dynamic home CMS, and email OTP verification.</li>
+          <li><strong>Real-Time Chat &amp; Cloud Hosting:</strong> Implemented bidirectional live messaging using Laravel Reverb WebSockets; configured production deployment on Hostinger VPS (CloudPanel) with Nginx SSL, static asset caching, Supervisor queue workers, and Firebase push notifications.</li>
+        </ul>
+      </div>
+
+      <!-- E-Holidays Villas -->
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">E-Holidays Villas — Holiday Villa Rental Booking Platform</div>
+        </div>
+        <div class="item-links">
+          <span>Website: <a href="http://e-holidaysvillas.com" target="_blank">e-holidaysvillas.com</a></span>
+          <span>•</span>
+          <span>Backend: <a href="https://api.e-holidaysvillas.com" target="_blank">api.e-holidaysvillas.com</a></span>
+          <span>•</span>
+          <span>GitHub: <a href="https://github.com/imtiaz-ahamed-hridoy/E-Holidaysvillas" target="_blank">E-Holidaysvillas</a></span>
+        </div>
+        <div class="project-summary">Direct-to-consumer luxury vacation rental booking platform with dynamic seasonal rate calculation</div>
+        <ul>
+          <li><strong>Booking Engine &amp; Geolocation:</strong> Built a vacation rental platform featuring real-time property availability calendars, custom seasonal pricing calculation matrices, Google Maps geocoding with draggable pins, and Stripe payment processing across 35 migrations.</li>
+          <li><strong>Legacy SQL ETL Migration:</strong> Engineered an ETL import engine that parsed, sanitized, and migrated 193,000+ lines from legacy VRS7 SQL databases into normalized relational schemas wrapped in database transactions; configured production deployment on cPanel server.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">Bachelor of Science in Computer Science &amp; Engineering (ongoing)</div>
+          <div class="item-date">2023 – 2027</div>
+        </div>
+        <p>Bangladesh University of Business &amp; Technology (BUBT), Mirpur-2, Dhaka</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">Diploma in Computer Science &amp; Technology (CGPA: 3.75 / 4.00)</div>
+          <div class="item-date">2019 – 2023</div>
+        </div>
+        <p>Dinajpur Institute of Science &amp; Technology, Dinajpur, Bangladesh</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="item-header">
+          <div class="item-title">Secondary School Certificate (SSC) — Science (GPA: 4.50 / 5.00)</div>
+          <div class="item-date">2018 – 2019</div>
+        </div>
+        <p>Lions School and College, Saidpur, Bangladesh</p>
+      </div>
+    </section>
+
+    <!-- Training & Certifications -->
+    <section>
+      <h2>Training &amp; Certifications</h2>
+      <p style="margin-bottom: 0.35rem;"><strong>ISP Setup Using MikroTik and Cisco Certified Network Associate (CCNA)</strong> — ICC Teleservices Ltd, Dhaka (2025)</p>
+      <p><strong>Web Development Using Laravel</strong> — Career Source BD, Dinajpur, Bangladesh (2023)</p>
+    </section>
+
+    <!-- Languages -->
+    <section>
+      <h2>Languages</h2>
+      <p><strong>Bengali:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> Professional working proficiency</p>
+    </section>
+  </div>
+
+</body>
+</html>
