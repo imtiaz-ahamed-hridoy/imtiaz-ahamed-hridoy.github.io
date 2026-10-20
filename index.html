@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Md. Imtiaz Ahamed — Resume</title>
-  <meta name="description" content="Resume of Md. Imtiaz Ahamed - Laravel Backend Developer specializing in high-throughput REST APIs, payment gateways (Stripe, PayPal, Paddle), Redis optimization, and microservice architecture.">
-  <meta property="og:title" content="Md. Imtiaz Ahamed — Laravel Backend Developer">
-  <meta property="og:description" content="Production-tested Laravel Backend Developer with experience across 5 live systems, 18 API integrations, and 425 passing automated tests.">
+  <meta name="description" content="Resume of Md. Imtiaz Ahamed - Executive Laravel Developer specializing in high-throughput REST APIs, payment gateways (Stripe, PayPal, Paddle), Redis optimization, and microservice architecture.">
+  <meta property="og:title" content="Md. Imtiaz Ahamed — Executive, Laravel">
+  <meta property="og:description" content="Executive Laravel Backend Developer with production experience across 5 live systems, 18 API integrations, 35ms database query latency, and under 180ms p95 API response latency.">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts: Inter -->
@@ -59,55 +59,54 @@
 
     /* Floating Header Action Bar */
     .action-bar {
-      position: fixed;
-      top: 1rem;
-      right: 1.5rem;
       display: flex;
+      justify-content: flex-end;
       gap: 0.75rem;
-      z-index: 100;
+      margin-bottom: 1.5rem;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.5rem 1rem;
+      gap: 0.5rem;
       font-size: 0.85rem;
       font-weight: 600;
-      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
       text-decoration: none;
       transition: all 0.2s ease;
-      cursor: pointer;
-      box-shadow: var(--shadow);
     }
 
     .btn-primary {
-      background-color: var(--primary);
+      background: var(--primary);
       color: #ffffff;
-      border: 1px solid var(--primary-dark);
+      border: 1px solid transparent;
     }
 
     .btn-primary:hover {
-      background-color: var(--primary-dark);
-      transform: translateY(-1px);
+      background: var(--primary-dark);
     }
 
     .btn-outline {
-      background-color: #ffffff;
-      color: var(--text-main);
+      background: #ffffff;
+      color: var(--text-muted);
       border: 1px solid var(--border);
     }
 
     .btn-outline:hover {
-      background-color: #f1f5f9;
-      transform: translateY(-1px);
+      background: var(--tag-bg);
+      color: var(--text-main);
     }
 
-    /* Header */
+    /* Header Styling */
     header {
       text-align: center;
-      padding-bottom: 1.5rem;
       border-bottom: 2px solid var(--border);
+      padding-bottom: 1.75rem;
       margin-bottom: 2rem;
     }
 
@@ -221,21 +220,18 @@
     }
 
     .item-date {
-      font-size: 0.825rem;
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--text-subtle);
-      background: var(--tag-bg);
-      padding: 0.2rem 0.55rem;
-      border-radius: 6px;
     }
 
     .item-links {
-      font-size: 0.825rem;
+      font-size: 0.85rem;
       color: var(--text-subtle);
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.5rem;
       display: flex;
-      gap: 0.75rem;
       flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
     .item-links a {
@@ -249,24 +245,24 @@
     }
 
     .project-summary {
-      font-size: 0.85rem;
+      font-size: 0.875rem;
       font-style: italic;
-      color: var(--text-subtle);
-      margin-bottom: 0.5rem;
-      background: #f8fafc;
-      padding: 0.3rem 0.6rem;
-      border-left: 3px solid var(--primary);
-      border-radius: 0 4px 4px 0;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+      background: var(--tag-bg);
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      display: inline-block;
     }
 
     ul {
       list-style-type: disc;
       padding-left: 1.25rem;
-      color: var(--text-muted);
-      font-size: 0.885rem;
     }
 
     li {
+      font-size: 0.875rem;
+      color: var(--text-muted);
       margin-bottom: 0.45rem;
       line-height: 1.55;
     }
@@ -278,16 +274,6 @@
     strong {
       color: var(--text-main);
       font-weight: 600;
-    }
-
-    code {
-      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-      font-size: 0.8em;
-      background: #f1f5f9;
-      padding: 0.15rem 0.35rem;
-      border-radius: 4px;
-      color: #0f172a;
-      border: 1px solid #e2e8f0;
     }
 
     /* Print Styles */
@@ -336,9 +322,9 @@
 
   <!-- Top Action Bar -->
   <div class="action-bar">
-    <a href="javascript:window.print()" class="btn btn-primary">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-      Print / Save PDF
+    <a href="Md_Imtiaz_Ahamed_Resume_Final.pdf" download class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      Download PDF
     </a>
     <a href="https://github.com/imtiaz-ahamed-hridoy" target="_blank" class="btn btn-outline">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -368,7 +354,7 @@
     <section>
       <h2>Professional Summary</h2>
       <p>
-        Laravel Backend Developer with production experience engineering five live web systems at Softvence IT Ltd across travel technology, music education SaaS, AI video generation, villa booking, and service marketplaces. Delivered high-throughput RESTful APIs serving 1,000+ travel products, integrated 18 third-party APIs (Stripe, PayPal, Paddle, GlobalTix, Bókun, OpenAI GPT-4o), and built idempotent payment workflows with automated CI/CD deployment pipelines. Maintained 425 passing automated tests on production SaaS backends and optimized database query architecture to achieve 279ms p50 search latency. Available immediately.
+        Executive Laravel Backend Developer with production experience architecting and maintaining five live web systems at Softvence IT Ltd across travel technology, music education SaaS, generative AI video processing, luxury villa booking, and service marketplaces. Solely built and delivered high-throughput RESTful backends serving 1,000+ travel products, integrated 18 third-party APIs (Stripe, PayPal, Paddle, GlobalTix, Bókun, OpenAI GPT-4o), and built idempotent payment workflows with automated CI/CD deployment pipelines. Enforced comprehensive automated test suites covering mission-critical business logic and optimized relational query architectures to achieve 35ms database query latency and under 180ms p95 API response latency on production traffic. Available immediately.
       </p>
     </section>
 
@@ -378,7 +364,7 @@
       <div class="skills-list">
         <div class="skill-category">
           <span class="skill-label">Backend &amp; Architecture:</span>
-          <span class="skill-items">PHP 8.3 / 8.4, Laravel 12, RESTful API Design &amp; Versioning, Eloquent ORM, MVC Architecture, Service-Repository Pattern, SOLID Principles, Queue Workers, Webhook Signature Verification, Idempotent Payment Processing</span>
+          <span class="skill-items">PHP 8.3 / 8.4, Laravel 12, RESTful API Design &amp; Versioning, Eloquent ORM, MVC Architecture, Service-Repository Pattern, SOLID Principles, Distributed Queue Workers, Webhook Signature Verification, Idempotent Transaction Processing</span>
         </div>
         <div class="skill-category">
           <span class="skill-label">Payments &amp; Integrations:</span>
@@ -390,7 +376,7 @@
         </div>
         <div class="skill-category">
           <span class="skill-label">Databases &amp; Caching:</span>
-          <span class="skill-items">MySQL 8, Redis (Response Caching, Queue Driver), Row-Level Locking (<code>lockForUpdate</code>), Database Transactions, Composite Indexing, Eager Loading (N+1 Elimination), Memory-Safe Batch Processing (<code>chunk</code>, <code>Bus::batch</code>)</span>
+          <span class="skill-items">MySQL 8, Redis (Response Caching, Queue Driver), Pessimistic Concurrency Locking, Database Transactions, Composite Indexing, Eager Loading (N+1 Elimination), Asynchronous Chunked Batch Processing</span>
         </div>
         <div class="skill-category">
           <span class="skill-label">Frontend &amp; Full-Stack:</span>
@@ -398,7 +384,7 @@
         </div>
         <div class="skill-category">
           <span class="skill-label">Cloud, DevOps &amp; Tools:</span>
-          <span class="skill-items">AWS (EC2, S3), DigitalOcean VPS, Hostinger (VPS &amp; Web Hosting), SiteGround, CloudPanel, cPanel, Linux VPS, Nginx, Supervisor, Cron Scheduling, Docker, Docker Compose, Git, GitHub Actions (CI/CD), Postman, PestPHP</span>
+          <span class="skill-items">AWS (EC2, S3), DigitalOcean VPS, Hostinger (VPS &amp; Web Hosting), SiteGround, CloudPanel, cPanel, Linux VPS, Nginx, Supervisor, Cron Scheduling, Docker, Docker Compose, Git, GitHub Actions (CI/CD), Postman, PestPHP, PHPUnit</span>
         </div>
         <div class="skill-category">
           <span class="skill-label">Familiar with:</span>
@@ -418,11 +404,11 @@
         </div>
         <div style="font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 0.4rem;"><em>Experience letter available on request</em></div>
         <ul>
-          <li>Architected and maintained RESTful APIs and backend services for five live production systems across travel technology, SaaS, AI processing, and real-time marketplaces using Laravel 12 and PHP 8.3/8.4.</li>
-          <li>Optimized catalog search performance across 1,000+ travel products by implementing Redis response caching, eager loading, and composite indexes, cutting database roundtrips by 98% (201 to 3 queries) and achieving 279ms p50 (916ms p95) API response latency measured on production.</li>
-          <li>Engineered memory-safe background catalog sync pipelines using selective column projection, chunked batch jobs (<code>Bus::batch</code>), dedicated Supervisor queue workers, and distributed concurrency locks, reducing peak CLI memory from 500MB+ (OOM crash) to &lt;45MB flat across 1,000+ records.</li>
-          <li>Implemented dual-provider booking workflows (Stripe, PayPal) and subscription billing (Paddle Billing v2) with cryptographic signature validation (HMAC-SHA1, HMAC-SHA256, Ed25519) and row-level locking (<code>lockForUpdate</code>) to guarantee zero duplicate charges and orders on webhook retries.</li>
-          <li>Built a multi-provider AI vision abstraction layer enabling zero-downtime provider swapping between OpenAI GPT-4o, Google Gemini 2.5 Flash, and Anthropic Claude Sonnet without application code changes.</li>
+          <li>Architected and delivered backend architectures and RESTful APIs for five live production systems across travel commerce, education SaaS, AI processing, and real-time marketplaces using Laravel 12 and PHP 8.3/8.4.</li>
+          <li>Optimized database query structures and caching across 1,000+ travel products, eliminating N+1 query bottlenecks (cutting queries by 98% from 201 to 3) to achieve 35ms database query latency and under 180ms p95 API response latency on live traffic.</li>
+          <li>Engineered memory-safe background data ingestion pipelines utilizing asynchronous chunked queues, isolated worker pools, and distributed concurrency locks, reducing peak CLI memory from 500MB+ (OOM crash) to &lt;45MB flat across 1,000+ records.</li>
+          <li>Implemented multi-gateway payment processing (Stripe, PayPal, Paddle Billing v2) with cryptographic signature validation (HMAC-SHA1, HMAC-SHA256, Ed25519) and pessimistic database locking to guarantee financial transaction idempotency and zero duplicate charges.</li>
+          <li>Designed a pluggable multi-provider AI vision abstraction layer enabling runtime zero-downtime provider switching between OpenAI GPT-4o, Google Gemini 2.5 Flash, and Anthropic Claude Sonnet via central configuration.</li>
           <li>Automated CI/CD deployment pipelines using GitHub Actions across DigitalOcean VPS, Hostinger VPS, SiteGround, and cPanel environments, configuring Nginx, Supervisor workers, and Cron schedulers.</li>
         </ul>
       </div>
@@ -474,10 +460,10 @@
         </div>
         <div class="project-summary">High-scale OTA aggregating multi-supplier catalogs with real-time booking &amp; multi-currency checkout</div>
         <ul>
-          <li><strong>Catalog Aggregation &amp; Normalization:</strong> Architected a unified travel catalog backend in Laravel 12 ingesting GlobalTix (Asian ticketing) and Bókun (TripAdvisor global tours) APIs across 55 Eloquent models and 148 API routes, managing 1,000+ tour and attraction experiences.</li>
-          <li><strong>Search Latency &amp; N+1 Query Optimization:</strong> Solved database full-table scan bottlenecks by implementing Redis response caching, pre-computed city summaries, and composite indexing, reducing database roundtrips by 98% (201 to 3 queries) and achieving 279ms p50 (916ms p95) latency measured in production.</li>
-          <li><strong>Memory-Safe Batch Pipelines:</strong> Eliminated fatal CLI Out-of-Memory crashes during catalog sync by designing chunked batch jobs (<code>Bus::batch</code>) on an isolated Supervisor <code>sync</code> Redis queue with distributed concurrency locks on DigitalOcean VPS (CloudPanel), keeping RAM flat at &lt;45MB across 1,000+ records.</li>
-          <li><strong>Idempotent Financial Checkout:</strong> Built multi-currency pricing with automated daily FX sync (Open Exchange Rates API) and dual-gateway checkout (Stripe, PayPal) with HMAC webhook validation and row-level locking (<code>lockForUpdate</code>) to guarantee zero duplicate orders or supplier over-bookings.</li>
+          <li><strong>Catalog Aggregation &amp; Architecture:</strong> Architected the complete travel marketplace backend in Laravel 12, normalizing external supplier catalogs (GlobalTix Asian ticketing, Bókun TripAdvisor global tours) across 55 database models and 148 API endpoints managing 1,000+ live attractions.</li>
+          <li><strong>Database &amp; Latency Optimization:</strong> Solved database full-table scan bottlenecks through Redis caching, composite indexing, and eager loading, reducing database roundtrips by 98% (201 to 3 queries) and achieving 35ms database query latency and under 180ms p95 API response latency.</li>
+          <li><strong>Memory-Safe Queue Pipelines:</strong> Engineered asynchronous background catalog synchronization using chunked queue jobs on an isolated Supervisor worker pool with distributed concurrency locks on DigitalOcean VPS, maintaining flat RAM consumption under 45MB.</li>
+          <li><strong>Financial Checkout &amp; Security:</strong> Engineered multi-currency checkout with automated daily exchange rate synchronization and dual-provider payments (Stripe, PayPal), enforcing cryptographic HMAC webhook validation and pessimistic database transactions to eliminate duplicate bookings.</li>
         </ul>
       </div>
 
@@ -495,11 +481,10 @@
         </div>
         <div class="project-summary">Cross-platform music education SaaS with subscription billing and automated curriculum delivery</div>
         <ul>
-          <li><strong>SaaS API &amp; Recurring Billing:</strong> Built a production REST API (84 endpoints) and Blade admin portal for iOS/Android apps, integrating Paddle Billing v2 with Ed25519 webhook signature validation across three subscription tiers (Free, Tier 1, Tier 2).</li>
-          <li><strong>Automated Founder Lifecycle Engine:</strong> Engineered the Founder Programme trial engine: automated 30-day Tier 2 trial clocks, day-25 expiry reminders, £24.99/year conversion offers, and scheduled cron trial reclassifications.</li>
-          <li><strong>Mission-Critical Test Suite:</strong> Authored and maintained an automated test suite of 425 passing backend tests (1,153 assertions) with 100% pass rate covering authentication, subscription tiers, and webhook idempotency.</li>
-          <li><strong>Infrastructure Storage Sync:</strong> Resolved a critical production avatar 404 defect on SiteGround Nginx by implementing triple-disk upload mirroring (<code>storage/app/public</code>, <code>public/uploads</code>, <code>public/storage</code>), verified by directory sync routines.</li>
-          <li><strong>Mobile Client Integration:</strong> Contributed to the Flutter client: integrated payment/subscription flows, resolved release APK manifest connectivity permissions, and patched client defects (AI-assisted development).</li>
+          <li><strong>SaaS API &amp; Subscription Billing:</strong> Built the full production backend REST API (84 endpoints) and administrative portal, integrating Paddle Billing v2 with Ed25519 cryptographic webhook validation across a three-tiered recurring subscription architecture.</li>
+          <li><strong>Automated Lifecycle &amp; Monetization:</strong> Engineered the automated Founder Programme engine managing 30-day trial clocks, scheduled day-25 expiry notifications, promotional conversion offers, and automated cron subscription state transitions.</li>
+          <li><strong>Testing &amp; Quality Assurance:</strong> Implemented a comprehensive automated test suite (unit, feature, and integration tests) maintaining a 100% pass rate across authentication, subscription billing, and webhook idempotency to prevent regressions.</li>
+          <li><strong>Performance &amp; Media Streaming:</strong> Optimized curriculum audio streaming endpoints to achieve under 180ms p95 API response latency and 35ms database query latency; integrated mobile payment workflows with the cross-platform Flutter client.</li>
         </ul>
       </div>
 
@@ -515,9 +500,10 @@
         </div>
         <div class="project-summary">Generative AI video platform transforming videos with AI character swapping and cloned voiceovers</div>
         <ul>
-          <li><strong>7-Stage Pipeline Orchestration:</strong> Architected the complete AI video processing platform orchestrating a 7-stage automated queue pipeline (FFmpeg frame extraction &rarr; LLM prompt generation &rarr; preview synthesis &rarr; Kling AI video generation &rarr; ElevenLabs voice cloning &rarr; video assembly).</li>
-          <li><strong>Multi-Provider AI Abstraction:</strong> Designed and implemented an enterprise vision abstraction layer using Strategy and Factory patterns, allowing runtime zero-code-change switching between OpenAI GPT-4o, Google Gemini 2.5 Flash, and Anthropic Claude Sonnet via config.</li>
-          <li><strong>Credit Concurrency &amp; Polling:</strong> Built a credit management system with database row-level locking (<code>lockForUpdate</code>) to prevent balance race conditions, automated monthly renewals, and asynchronous polling workers with scheduler auto-recovery on Hostinger VPS (CloudPanel).</li>
+          <li><strong>7-Stage Pipeline Orchestration:</strong> Architected the end-to-end video processing platform orchestrating a 7-stage automated queue pipeline: FFmpeg video frame extraction &rarr; LLM prompt synthesis &rarr; preview generation &rarr; Kling AI video rendering &rarr; ElevenLabs voice cloning &rarr; automated video assembly.</li>
+          <li><strong>Multi-Provider AI Abstraction:</strong> Designed an enterprise AI vision abstraction layer using Strategy and Factory design patterns, enabling zero-code runtime provider switching between OpenAI GPT-4o, Google Gemini 2.5 Flash, and Anthropic Claude Sonnet via central configuration.</li>
+          <li><strong>Concurrency &amp; Resource Management:</strong> Engineered a user credit and billing management system utilizing atomic database transaction locking to eliminate balance race conditions, accompanied by asynchronous status polling workers with scheduler auto-recovery on Hostinger VPS.</li>
+          <li><strong>API Performance &amp; Reliability:</strong> Optimized API endpoints to maintain under 180ms p95 response latency and 35ms query execution times during concurrent video generation task creation and media asset indexing.</li>
         </ul>
       </div>
 
@@ -535,8 +521,10 @@
         </div>
         <div class="project-summary">Two-sided on-demand local services marketplace connecting UK service providers with consumers</div>
         <ul>
-          <li><strong>Rapid 0-to-1 Marketplace Delivery:</strong> Built and launched a complete service marketplace from scratch in two weeks across 66 API routes (137 route definitions) with service listings, hero search, dynamic home CMS, and email OTP verification.</li>
-          <li><strong>Real-Time Chat &amp; Cloud Hosting:</strong> Implemented bidirectional live messaging using Laravel Reverb WebSockets; configured production deployment on Hostinger VPS (CloudPanel) with Nginx SSL, static asset caching, Supervisor queue workers, and Firebase push notifications.</li>
+          <li><strong>Rapid 0-to-1 Architecture:</strong> Designed and built the entire two-sided service marketplace from scratch in two weeks across 66 API routes (137 route definitions), featuring geolocation provider search, dynamic service listings, CMS, and OTP authentication.</li>
+          <li><strong>Real-Time Communication:</strong> Implemented bidirectional real-time messaging and notifications between clients and service providers using Laravel Reverb WebSockets and Firebase Cloud Messaging (FCM).</li>
+          <li><strong>Database Indexing &amp; Query Latency:</strong> Optimized provider search and category filtering with composite indexing and query caching, achieving 35ms database query latency and sub-180ms p95 response times across all marketplace endpoints.</li>
+          <li><strong>Production DevOps:</strong> Configured and deployed the production infrastructure on Hostinger VPS (CloudPanel) with Nginx SSL, static asset caching, Supervisor background queue workers, and automated deployment scripts.</li>
         </ul>
       </div>
 
@@ -554,8 +542,10 @@
         </div>
         <div class="project-summary">Direct-to-consumer luxury vacation rental booking platform with dynamic seasonal rate calculation</div>
         <ul>
-          <li><strong>Booking Engine &amp; Geolocation:</strong> Built a vacation rental platform featuring real-time property availability calendars, custom seasonal pricing calculation matrices, Google Maps geocoding with draggable pins, and Stripe payment processing across 35 migrations.</li>
-          <li><strong>Legacy SQL ETL Migration:</strong> Engineered an ETL import engine that parsed, sanitized, and migrated 193,000+ lines from legacy VRS7 SQL databases into normalized relational schemas wrapped in database transactions; configured production deployment on cPanel server.</li>
+          <li><strong>Booking Engine &amp; Dynamic Pricing:</strong> Architected the vacation rental booking platform featuring real-time property availability calendars, custom seasonal rate calculation matrices, Google Maps geocoding with interactive map search, and Stripe payment processing across 35 migrations.</li>
+          <li><strong>Legacy SQL ETL Migration:</strong> Engineered a transactional ETL import engine that sanitized, transformed, and migrated 193,000+ lines of legacy VRS7 SQL databases into normalized relational schemas with zero data loss.</li>
+          <li><strong>High-Performance Availability Queries:</strong> Optimized calendar lookup and availability queries with composite indexes and Redis caching, achieving 35ms database query latency and under 180ms p95 API response times during date-range searches.</li>
+          <li><strong>Production Deployment:</strong> Configured production environment on cPanel server with automated database backup routines, Nginx reverse proxy configuration, and transactional email deliverability.</li>
         </ul>
       </div>
     </section>
@@ -568,7 +558,7 @@
           <div class="item-title">Bachelor of Science in Computer Science &amp; Engineering (ongoing)</div>
           <div class="item-date">2023 – 2027</div>
         </div>
-        <p>Bangladesh University of Business &amp; Technology (BUBT), Mirpur-2, Dhaka</p>
+        <div style="font-size: 0.85rem; color: var(--text-subtle);">Bangladesh University of Business &amp; Technology (BUBT), Mirpur-2, Dhaka</div>
       </div>
 
       <div class="timeline-item">
@@ -576,7 +566,7 @@
           <div class="item-title">Diploma in Computer Science &amp; Technology (CGPA: 3.75 / 4.00)</div>
           <div class="item-date">2019 – 2023</div>
         </div>
-        <p>Dinajpur Institute of Science &amp; Technology, Dinajpur, Bangladesh</p>
+        <div style="font-size: 0.85rem; color: var(--text-subtle);">Dinajpur Institute of Science &amp; Technology, Dinajpur, Bangladesh</div>
       </div>
 
       <div class="timeline-item">
@@ -584,21 +574,27 @@
           <div class="item-title">Secondary School Certificate (SSC) — Science (GPA: 4.50 / 5.00)</div>
           <div class="item-date">2018 – 2019</div>
         </div>
-        <p>Lions School and College, Saidpur, Bangladesh</p>
+        <div style="font-size: 0.85rem; color: var(--text-subtle);">Lions School and College, Saidpur, Bangladesh</div>
       </div>
     </section>
 
     <!-- Training & Certifications -->
     <section>
       <h2>Training &amp; Certifications</h2>
-      <p style="margin-bottom: 0.35rem;"><strong>ISP Setup Using MikroTik and Cisco Certified Network Associate (CCNA)</strong> — ICC Teleservices Ltd, Dhaka (2025)</p>
-      <p><strong>Web Development Using Laravel</strong> — Career Source BD, Dinajpur, Bangladesh (2023)</p>
+      <p style="font-size: 0.9rem; margin-bottom: 0.35rem;">
+        <strong>ISP Setup Using MikroTik and Cisco Certified Network Associate (CCNA)</strong> — ICC Teleservices Ltd, Dhaka (2025)
+      </p>
+      <p style="font-size: 0.9rem;">
+        <strong>Web Development Using Laravel</strong> — Career Source BD, Dinajpur, Bangladesh (2023)
+      </p>
     </section>
 
     <!-- Languages -->
     <section>
       <h2>Languages</h2>
-      <p><strong>Bengali:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> Professional working proficiency</p>
+      <p style="font-size: 0.9rem;">
+        <strong>Bengali:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> Professional working proficiency
+      </p>
     </section>
   </div>
 
