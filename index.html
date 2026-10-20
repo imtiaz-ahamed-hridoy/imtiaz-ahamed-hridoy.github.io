@@ -350,7 +350,7 @@
     <!-- Header -->
     <header>
       <h1>MD. IMTIAZ AHAMED</h1>
-      <div class="headline">Laravel Backend Developer | PHP, Laravel, REST APIs &amp; Payment Systems</div>
+      <div class="headline">Executive, Laravel | PHP, Laravel, REST APIs &amp; Payment Systems</div>
       <div class="contact-links">
         <span>📍 Dhaka, Bangladesh</span>
         <span>•</span>
@@ -368,7 +368,7 @@
     <section>
       <h2>Professional Summary</h2>
       <p>
-        Laravel Backend Developer with production experience engineering five live web systems at Softvence IT Ltd across travel technology, music education SaaS, AI video generation, villa booking, and service marketplaces. Delivered high-throughput RESTful APIs serving 100,000+ travel products, integrated 18 third-party APIs (Stripe, PayPal, Paddle, GlobalTix, Bókun, OpenAI GPT-4o), and built idempotent payment workflows with automated CI/CD deployment pipelines. Maintained 425 passing automated tests on production SaaS backends and optimized database query architecture to achieve 279ms p50 search latency. Available immediately.
+        Laravel Backend Developer with production experience engineering five live web systems at Softvence IT Ltd across travel technology, music education SaaS, AI video generation, villa booking, and service marketplaces. Delivered high-throughput RESTful APIs serving 1,000+ travel products, integrated 18 third-party APIs (Stripe, PayPal, Paddle, GlobalTix, Bókun, OpenAI GPT-4o), and built idempotent payment workflows with automated CI/CD deployment pipelines. Maintained 425 passing automated tests on production SaaS backends and optimized database query architecture to achieve 279ms p50 search latency. Available immediately.
       </p>
     </section>
 
@@ -419,8 +419,8 @@
         <div style="font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 0.4rem;"><em>Experience letter available on request</em></div>
         <ul>
           <li>Architected and maintained RESTful APIs and backend services for five live production systems across travel technology, SaaS, AI processing, and real-time marketplaces using Laravel 12 and PHP 8.3/8.4.</li>
-          <li>Optimized catalog search performance across 100,000+ travel products by implementing Redis response caching, eager loading, and composite indexes, cutting database roundtrips by 98% (201 to 3 queries) and achieving 279ms p50 (916ms p95) API response latency measured on production.</li>
-          <li>Engineered memory-safe background catalog sync pipelines using selective column projection, chunked batch jobs (<code>Bus::batch</code>), dedicated Supervisor queue workers, and distributed concurrency locks, reducing peak CLI memory from 500MB+ (OOM crash) to &lt;45MB flat.</li>
+          <li>Optimized catalog search performance across 1,000+ travel products by implementing Redis response caching, eager loading, and composite indexes, cutting database roundtrips by 98% (201 to 3 queries) and achieving 279ms p50 (916ms p95) API response latency measured on production.</li>
+          <li>Engineered memory-safe background catalog sync pipelines using selective column projection, chunked batch jobs (<code>Bus::batch</code>), dedicated Supervisor queue workers, and distributed concurrency locks, reducing peak CLI memory from 500MB+ (OOM crash) to &lt;45MB flat across 1,000+ records.</li>
           <li>Implemented dual-provider booking workflows (Stripe, PayPal) and subscription billing (Paddle Billing v2) with cryptographic signature validation (HMAC-SHA1, HMAC-SHA256, Ed25519) and row-level locking (<code>lockForUpdate</code>) to guarantee zero duplicate charges and orders on webhook retries.</li>
           <li>Built a multi-provider AI vision abstraction layer enabling zero-downtime provider swapping between OpenAI GPT-4o, Google Gemini 2.5 Flash, and Anthropic Claude Sonnet without application code changes.</li>
           <li>Automated CI/CD deployment pipelines using GitHub Actions across DigitalOcean VPS, Hostinger VPS, SiteGround, and cPanel environments, configuring Nginx, Supervisor workers, and Cron schedulers.</li>
@@ -474,9 +474,9 @@
         </div>
         <div class="project-summary">High-scale OTA aggregating multi-supplier catalogs with real-time booking &amp; multi-currency checkout</div>
         <ul>
-          <li><strong>Catalog Aggregation &amp; Normalization:</strong> Architected a unified travel catalog backend in Laravel 12 ingesting GlobalTix (Asian ticketing) and Bókun (TripAdvisor global tours) APIs across 55 Eloquent models and 148 API routes, managing 100,000+ tour and attraction experiences.</li>
+          <li><strong>Catalog Aggregation &amp; Normalization:</strong> Architected a unified travel catalog backend in Laravel 12 ingesting GlobalTix (Asian ticketing) and Bókun (TripAdvisor global tours) APIs across 55 Eloquent models and 148 API routes, managing 1,000+ tour and attraction experiences.</li>
           <li><strong>Search Latency &amp; N+1 Query Optimization:</strong> Solved database full-table scan bottlenecks by implementing Redis response caching, pre-computed city summaries, and composite indexing, reducing database roundtrips by 98% (201 to 3 queries) and achieving 279ms p50 (916ms p95) latency measured in production.</li>
-          <li><strong>Memory-Safe Batch Pipelines:</strong> Eliminated fatal CLI Out-of-Memory crashes during catalog sync by designing chunked batch jobs (<code>Bus::batch</code>) on an isolated Supervisor <code>sync</code> Redis queue with distributed concurrency locks on DigitalOcean VPS (CloudPanel), keeping RAM flat at &lt;45MB.</li>
+          <li><strong>Memory-Safe Batch Pipelines:</strong> Eliminated fatal CLI Out-of-Memory crashes during catalog sync by designing chunked batch jobs (<code>Bus::batch</code>) on an isolated Supervisor <code>sync</code> Redis queue with distributed concurrency locks on DigitalOcean VPS (CloudPanel), keeping RAM flat at &lt;45MB across 1,000+ records.</li>
           <li><strong>Idempotent Financial Checkout:</strong> Built multi-currency pricing with automated daily FX sync (Open Exchange Rates API) and dual-gateway checkout (Stripe, PayPal) with HMAC webhook validation and row-level locking (<code>lockForUpdate</code>) to guarantee zero duplicate orders or supplier over-bookings.</li>
         </ul>
       </div>
