@@ -454,10 +454,10 @@
         </div>
         <div class="project-summary">High-scale OTA aggregating multi-supplier catalogs with real-time booking and multi-currency checkout</div>
         <ul>
-          <li><strong>Catalog Architecture &amp; Data Ingestion:</strong> Built the unified travel catalog backend in Laravel 12 to normalize external supplier feeds from GlobalTix (Asian ticketing) and Bókun (TripAdvisor global tours) across 55 database models and 148 API endpoints, managing 1,000+ live attractions and tours.</li>
-          <li><strong>Database Indexing &amp; Latency Optimization:</strong> Eliminated full-table scans by adding composite indexes, eager loading relationships, and implementing Redis caching. Cut database queries by 98% (from 201 down to 3 per request), delivering 35ms database query latency and under 180ms p95 API response times on production search traffic.</li>
-          <li><strong>Background Queue Processing:</strong> Designed memory-safe catalog synchronization using chunked background queue workers and concurrency locking on DigitalOcean VPS, reducing memory usage from 500MB+ to under 45MB flat across external product records.</li>
-          <li><strong>Payment Integration &amp; Checkout Security:</strong> Built multi-currency checkout with automated daily exchange rate updates and dual payment gateways (Stripe, PayPal). Enforced cryptographic webhook signature verification and database transactions to prevent race conditions and duplicate bookings.</li>
+          <li><strong>Architecture &amp; Catalog Ingestion:</strong> Architected modular API backend using Data Transfer Objects, Normalizers, and Provider Factories to decouple external supplier feeds from core booking domain models.</li>
+          <li><strong>Supplier Normalization &amp; Sync:</strong> Engineered normalization pipelines reconciling divergent API payloads from GlobalTix and Bokun into unified models, eliminating sync memory crashes via chunked queue batching.</li>
+          <li><strong>Checkout Security &amp; Webhooks:</strong> Enforced cryptographic HMAC signature verification on supplier webhooks, row-level database locking during checkout, and automated rate limiting on public routes.</li>
+          <li><strong>Search Performance &amp; Optimization:</strong> Eliminated relational query loops during searches using eager loading, composite database indexes, and Redis caching, achieving under 180ms p95 API response latency and 35ms query latency.</li>
         </ul>
       </div>
 
@@ -494,10 +494,10 @@
         </div>
         <div class="project-summary">Generative AI platform transforming video characters with face swapping and cloned voiceovers</div>
         <ul>
-          <li><strong>Automated Pipeline Orchestration:</strong> Architected a 7-stage asynchronous queue pipeline connecting video frame extraction, prompt generation, preview rendering, Kling AI video rendering, ElevenLabs voice cloning, and final video composition into a cohesive user workflow.</li>
-          <li><strong>Multi-Provider AI Abstraction:</strong> Built a flexible vision provider layer using Strategy and Factory design patterns, allowing the system to switch between OpenAI GPT-4o, Google Gemini, and Anthropic Claude through configuration without code changes.</li>
-          <li><strong>User Balance &amp; Queue Management:</strong> Built the credit billing system using database transactions and concurrency control to prevent balance race conditions during concurrent generations, backed by automated polling workers on Hostinger VPS.</li>
-          <li><strong>API Performance &amp; Reliability:</strong> Optimized job status polling and asset creation endpoints to maintain under 180ms p95 response times and 35ms query latency under concurrent video processing workloads.</li>
+          <li><strong>Architecture &amp; AI Abstraction:</strong> Architected service-driven video processing backend using Strategy and Factory design patterns to decouple multi-provider AI integrations and asynchronous job pipelines.</li>
+          <li><strong>Multi-Provider Vision Engine:</strong> Engineered dynamic provider abstraction layer allowing runtime switching between Google Gemini, OpenAI GPT, and Anthropic Claude, resolving character collision bugs via UUID validation.</li>
+          <li><strong>Credit Security &amp; Concurrency:</strong> Implemented token-based API authorization, database row locking on credit deductions to prevent concurrent overdraft race conditions, and prompt sanitization against injection.</li>
+          <li><strong>Pipeline Performance &amp; Polling:</strong> Offloaded compute-heavy video frame extraction and multi-stage rendering to background Redis queue workers, achieving under 180ms p95 API response latency and 35ms query latency.</li>
         </ul>
       </div>
 
@@ -515,10 +515,10 @@
         </div>
         <div class="project-summary">Two-sided on-demand local services marketplace connecting UK service providers with consumers</div>
         <ul>
-          <li><strong>Platform Architecture &amp; Rapid Delivery:</strong> Designed and launched the full two-sided marketplace from scratch in two weeks across 66 API routes (137 route definitions), covering geolocation search, provider profiles, booking requests, and email OTP verification.</li>
-          <li><strong>Real-Time Messaging:</strong> Implemented bidirectional real-time chat and push notifications between customers and service providers using Laravel Reverb WebSockets and Firebase Cloud Messaging.</li>
-          <li><strong>Search &amp; Database Tuning:</strong> Optimized marketplace category filtering and location-based provider queries with composite indexing and Redis caching, achieving 35ms database query latency and under 180ms p95 API response times.</li>
-          <li><strong>Production Deployment:</strong> Configured production VPS infrastructure on Hostinger (CloudPanel) with Nginx, SSL certificates, Supervisor queue workers, and automated deployment scripts.</li>
+          <li><strong>Architecture &amp; Service Layer:</strong> Architected API-first modular backend using dedicated service classes, repository interfaces, form requests, and API resources to decouple business logic from HTTP presentation controllers.</li>
+          <li><strong>Real-Time WebSockets Engine:</strong> Engineered real-time bidirectional chat messaging using Laravel Reverb WebSockets with authenticated presence channels, typing state broadcasts, and message policy authorization.</li>
+          <li><strong>Marketplace Security &amp; Access:</strong> Implemented token authentication via Laravel Sanctum, phone and email OTP verification, model ownership authorization policies, route rate limiting, and mass-assignment protection.</li>
+          <li><strong>Search Optimization &amp; Infrastructure:</strong> Tuned category filtering and location radius provider lookup queries with eager loading, composite indexing, and Redis caching, achieving under 180ms p95 API response latency and 35ms query latency.</li>
         </ul>
       </div>
 
@@ -536,10 +536,10 @@
         </div>
         <div class="project-summary">Direct-to-consumer luxury vacation rental booking platform with dynamic seasonal rate calculation</div>
         <ul>
-          <li><strong>Booking Engine &amp; Dynamic Rates:</strong> Built the vacation rental booking platform with real-time property availability calendars, custom seasonal rate calculation matrices, Google Maps location search, and Stripe payment processing across 35 migrations.</li>
-          <li><strong>Legacy Database Migration:</strong> Developed a data import pipeline that cleaned, normalized, and imported 193,000+ lines of legacy VRS7 SQL databases into a modern relational schema with zero data loss.</li>
-          <li><strong>Availability Search Optimization:</strong> Tuned date-range availability and pricing queries using database indexes and Redis caching, achieving 35ms database query latency and under 180ms p95 API response latency.</li>
-          <li><strong>Production Environment:</strong> Configured and maintained the cPanel hosting environment, setting up automated database backups, transactional email deliverability, and Nginx reverse proxy rules.</li>
+          <li><strong>Architecture &amp; Booking Engine:</strong> Architected layered MVC backend featuring dedicated pricing calculation services, location search services, and transactional booking workflows across property models.</li>
+          <li><strong>Legacy Database Migration:</strong> Developed a transactional ETL import engine streaming and converting legacy MySQL dump files into normalized schemas across properties, rates, and amenities with zero data loss.</li>
+          <li><strong>Checkout Security &amp; Webhooks:</strong> Implemented Stripe payment processing with cryptographic webhook signature validation, PDO parameter binding to prevent SQL injection, and atomic database reservation locking.</li>
+          <li><strong>Availability Search Optimization:</strong> Tuned date-range availability lookups and seasonal rate matrices using composite database indexes and Redis query caching, achieving under 180ms p95 API response latency and 35ms query latency.</li>
         </ul>
       </div>
     </section>
