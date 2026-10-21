@@ -51,7 +51,6 @@
 ThingsToDoLists is an online travel agency experiences marketplace aggregating multi-supplier tours and attraction tickets.
 Live URL: https://thingstodolists.com | Admin: https://admin.thingstodolists.com | GitHub: https://github.com/imtiaz-ahamed-hridoy/ThingsToDoLists
 
-Role: Backend Engineer
 Stack: Laravel, REST API, MySQL, Redis, DigitalOcean, GitHub Actions
 
 • Architecture & Design: Architected layered catalog synchronization backend using provider normalizers, factory patterns for sync drivers, DTOs, and transactional persistence services.
@@ -130,7 +129,6 @@ Stack: Laravel, REST API, MySQL, Redis, DigitalOcean, GitHub Actions
 NumoniX is an interactive music education SaaS platform serving global students with structured ear training and music theory curricula.
 Live URL: https://api.numonix.app | GitHub: https://github.com/imtiaz-ahamed-hridoy/Numonix-Backend
 
-Role: Backend Engineer
 Stack: Laravel, REST API, MySQL, Redis, Flutter, GitHub Actions
 
 • Architecture & Design: Architected layered API-first backend using service layers, repository patterns with interface bindings, form requests, and API resources.
@@ -208,7 +206,6 @@ Stack: Laravel, REST API, MySQL, Redis, Flutter, GitHub Actions
 Sinozia is a generative AI video character replacement platform automating face swaps and cloned voiceovers in uploaded videos.
 Live URL: https://sinozia.com | GitHub: https://github.com/imtiaz-ahamed-hridoy/Sinozia
 
-Role: Backend Engineer
 Stack: Laravel, REST API, MySQL, Redis, FFmpeg, Hostinger VPS
 
 • Architecture & Design: Architected asynchronous queue processing backend using strategy and factory patterns for multi-provider AI abstractions, dedicated credit services, and form requests.
@@ -286,7 +283,6 @@ Stack: Laravel, REST API, MySQL, Redis, FFmpeg, Hostinger VPS
 Lokaa is a UK on-demand local services marketplace connecting consumers with vetted home and trade service specialists.
 Live URL: https://lokaa.uk | Backend: https://api.lokaa.uk | GitHub: https://github.com/imtiaz-ahamed-hridoy/Lokaa
 
-Role: Backend Engineer
 Stack: Laravel, REST API, MySQL, Redis, WebSockets, GitHub Actions
 
 • Architecture & Design: Architected layered API-first backend using repository patterns for chat, dedicated search services, and form requests isolating validation rules.
@@ -361,7 +357,6 @@ Stack: Laravel, REST API, MySQL, Redis, WebSockets, GitHub Actions
 E-Holidays Villas is a luxury vacation rental booking platform providing direct consumer reservations with dynamic seasonal rates.
 Live URL: http://e-holidaysvillas.com | Backend: https://api.e-holidaysvillas.com | GitHub: https://github.com/imtiaz-ahamed-hridoy/E-Holidaysvillas
 
-Role: Backend Engineer
 Stack: Laravel, REST API, MySQL, Redis, Stripe, cPanel
 
 • Architecture & Design: Architected modular MVC reservation system using dedicated pricing services, search services, and form requests separating controllers from reservation rules.
