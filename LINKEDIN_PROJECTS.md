@@ -2,7 +2,7 @@
 **Candidate:** Md. Imtiaz Ahamed  
 **Designation:** Executive, Laravel / Backend Engineer  
 **Production Benchmarks:** 35ms database query latency | under 180ms p95 API response latency  
-**Punctuation Standard:** Strictly plain ASCII hyphens `-` only (zero em-dashes `—` or en-dashes `–`). Straight quotes only.
+**Punctuation Standard:** Strictly plain ASCII hyphens - only (zero em dashes or en dashes). Straight quotes only.
 
 ---
 
