@@ -454,10 +454,14 @@
         </div>
         <div class="project-summary">High-scale OTA aggregating multi-supplier catalogs with real-time booking and multi-currency checkout</div>
         <ul>
-          <li><strong>Catalog Architecture &amp; Data Ingestion:</strong> Built the unified travel catalog backend in Laravel 12 to normalize external supplier feeds from GlobalTix (Asian ticketing) and Bókun (TripAdvisor global tours) across 55 database models and 148 API endpoints, managing 1,000+ live attractions and tours.</li>
-          <li><strong>Database Indexing &amp; Latency Optimization:</strong> Eliminated full-table scans by adding composite indexes, eager loading relationships, and implementing Redis caching. Cut database queries by 98% (from 201 down to 3 per request), delivering 35ms database query latency and under 180ms p95 API response times on production search traffic.</li>
-          <li><strong>Background Queue Processing:</strong> Designed memory-safe catalog synchronization using chunked background queue workers and concurrency locking on DigitalOcean VPS, reducing memory usage from 500MB+ to under 45MB flat across external product records.</li>
-          <li><strong>Payment Integration &amp; Checkout Security:</strong> Built multi-currency checkout with automated daily exchange rate updates and dual payment gateways (Stripe, PayPal). Enforced cryptographic webhook signature verification and database transactions to prevent race conditions and duplicate bookings.</li>
+          <li><strong>Architecture &amp; Design:</strong> Architected layered catalog synchronization backend using provider normalizers, factory patterns for sync drivers, DTOs, and transactional persistence services.</li>
+          <li><strong>Features &amp; Functionality:</strong> Built attraction search, category filtering, real-time ticket availability lookups, multi-currency checkout, and an admin portal for catalog moderation and supplier credentials.</li>
+          <li><strong>Technical Complexity:</strong> Engineered unified normalization pipeline converting disparate GlobalTix and Bokun payloads into consistent internal catalog DTOs, backed by chunked queue jobs with concurrency locks.</li>
+          <li><strong>Security:</strong> Enforced cryptographic webhook signature verification, dual payment gateway validation for Stripe and PayPal, database transactions on order placement, and role-based administration middleware.</li>
+          <li><strong>Performance &amp; Scalability:</strong> Eliminated relational bottlenecks through eager loading, composite database indexes, and Redis caching, achieving API response time under 180ms and database query time under 35ms.</li>
+          <li><strong>Reliability &amp; Quality:</strong> Built isolated queue worker pools with retry backoffs, batch cancellation guards, and granular per-item exception handling so individual supplier payload failures never abort sync batches.</li>
+          <li><strong>Integrations:</strong> Integrated GlobalTix ticketing API, Bokun TripAdvisor tour API, Stripe, PayPal, and daily currency exchange rate synchronization feeds.</li>
+          <li><strong>DevOps &amp; Deployment:</strong> Configured DigitalOcean VPS environment with Nginx, Redis, Supervisor background worker pools, and automated deployment scripts.</li>
         </ul>
       </div>
 
@@ -475,10 +479,14 @@
         </div>
         <div class="project-summary">Cross-platform music education SaaS with subscription billing and automated curriculum delivery</div>
         <ul>
-          <li><strong>Architecture &amp; Service Layer:</strong> Architected the REST API using dedicated Service classes, Repository interfaces with container bindings, Form Requests, and API Resources to decouple domain logic from controllers under SOLID principles.</li>
-          <li><strong>Curriculum Engine &amp; Security:</strong> Built a dual-state learning engine for guest devices via cryptographic HMAC-SHA256 fingerprinting and registered students via Sanctum, enforcing role-based policies and mass-assignment protection.</li>
-          <li><strong>Paddle Billing &amp; Webhooks:</strong> Integrated Paddle Billing v2 recurring subscriptions with Ed25519 webhook signature verification, database transactions, and cron workers for automated trial tracking and subscription renewals.</li>
-          <li><strong>Streaming Performance &amp; Mobile:</strong> Tuned audio curriculum streaming endpoints with eager loading, composite indexes, and Redis caching to achieve under 180ms p95 API response latency and 35ms query latency; integrated with Flutter app.</li>
+          <li><strong>Architecture &amp; Design:</strong> Architected layered API-first backend using service layers, repository patterns with interface bindings, form requests, and API resources.</li>
+          <li><strong>Features &amp; Functionality:</strong> Built student onboarding, audio streaming, interactive quizzes, progress tracking, and admin tooling for managing lesson hierarchies and student subscriptions.</li>
+          <li><strong>Technical Complexity:</strong> Solved dynamic curriculum rendering by serializing polymorphic JSON elements that Flutter renders dynamically without App Store releases, plus a harmonic reframe engine.</li>
+          <li><strong>Security:</strong> Implemented Laravel Sanctum token auth, guest device HMAC hash verification, role policies, timing-attack-resistant comparisons, mass-assignment guards, and webhook signature verification.</li>
+          <li><strong>Performance &amp; Scalability:</strong> Optimized audio streaming and progress tracking endpoints using relational eager loading, composite indexes, and Redis caching, achieving API response time under 180ms and database query time under 35ms.</li>
+          <li><strong>Reliability &amp; Quality:</strong> Built automated feature and unit test suites covering auth, payment lifecycles, and security boundaries, integrated with automated deployment workflows and queue workers.</li>
+          <li><strong>Integrations:</strong> Integrated Paddle Billing for recurring subscriptions using idempotent webhook processing and atomic database transactions, paired with Firebase Cloud Messaging for mobile notifications.</li>
+          <li><strong>DevOps &amp; Deployment:</strong> Configured zero-downtime deployment pipelines on SiteGround VPS, managing maintenance toggles, config compilation, and automated queue workers via crontab scheduling.</li>
         </ul>
       </div>
 
@@ -494,10 +502,14 @@
         </div>
         <div class="project-summary">Generative AI platform transforming video characters with face swapping and cloned voiceovers</div>
         <ul>
-          <li><strong>Automated Pipeline Orchestration:</strong> Architected a 7-stage asynchronous queue pipeline connecting video frame extraction, prompt generation, preview rendering, Kling AI video rendering, ElevenLabs voice cloning, and final video composition into a cohesive user workflow.</li>
-          <li><strong>Multi-Provider AI Abstraction:</strong> Built a flexible vision provider layer using Strategy and Factory design patterns, allowing the system to switch between OpenAI GPT-4o, Google Gemini, and Anthropic Claude through configuration without code changes.</li>
-          <li><strong>User Balance &amp; Queue Management:</strong> Built the credit billing system using database transactions and concurrency control to prevent balance race conditions during concurrent generations, backed by automated polling workers on Hostinger VPS.</li>
-          <li><strong>API Performance &amp; Reliability:</strong> Optimized job status polling and asset creation endpoints to maintain under 180ms p95 response times and 35ms query latency under concurrent video processing workloads.</li>
+          <li><strong>Architecture &amp; Design:</strong> Architected asynchronous queue processing backend using strategy and factory patterns for multi-provider AI abstractions, dedicated credit services, and form requests.</li>
+          <li><strong>Features &amp; Functionality:</strong> Built character library uploads, video preview generation, character face swapping, cloned audio synthesis, user credit wallets, Stripe checkouts, and an admin dashboard for queues.</li>
+          <li><strong>Technical Complexity:</strong> Solved multi-model vision routing by engineering an AI abstraction layer where selecting Gemini or GPT routes image pairs and system instructions through specialized providers with unified prompt normalization.</li>
+          <li><strong>Security:</strong> Implemented database transaction locks on credit deductions to prevent balance race conditions during concurrent requests, combined with token authentication and secure webhook handling.</li>
+          <li><strong>Performance &amp; Scalability:</strong> Optimized asynchronous job polling and media indexing endpoints with composite database indexing and Redis query caching, achieving API response time under 180ms and database query time under 35ms.</li>
+          <li><strong>Reliability &amp; Quality:</strong> Built resilient queue workers with automated retry policies, task timeout boundaries, and automated scheduler recovery to survive third-party AI provider interruptions.</li>
+          <li><strong>Integrations:</strong> Integrated OpenAI GPT vision APIs, Google Gemini vision APIs, Anthropic Claude APIs, Kling AI video rendering, ElevenLabs voice cloning, and Stripe payment webhooks.</li>
+          <li><strong>DevOps &amp; Deployment:</strong> Configured Hostinger CloudPanel VPS with Nginx, Redis cache drivers, Supervisor queue daemons, and automated deployment routines.</li>
         </ul>
       </div>
 
@@ -515,10 +527,14 @@
         </div>
         <div class="project-summary">Two-sided on-demand local services marketplace connecting UK service providers with consumers</div>
         <ul>
-          <li><strong>Platform Architecture &amp; Rapid Delivery:</strong> Designed and launched the full two-sided marketplace from scratch in two weeks across 66 API routes (137 route definitions), covering geolocation search, provider profiles, booking requests, and email OTP verification.</li>
-          <li><strong>Real-Time Messaging:</strong> Implemented bidirectional real-time chat and push notifications between customers and service providers using Laravel Reverb WebSockets and Firebase Cloud Messaging.</li>
-          <li><strong>Search &amp; Database Tuning:</strong> Optimized marketplace category filtering and location-based provider queries with composite indexing and Redis caching, achieving 35ms database query latency and under 180ms p95 API response times.</li>
-          <li><strong>Production Deployment:</strong> Configured production VPS infrastructure on Hostinger (CloudPanel) with Nginx, SSL certificates, Supervisor queue workers, and automated deployment scripts.</li>
+          <li><strong>Architecture &amp; Design:</strong> Architected layered API-first backend using repository patterns for chat, dedicated search services, and form requests isolating validation rules.</li>
+          <li><strong>Features &amp; Functionality:</strong> Built customer onboarding, geolocation search, booking requests, reviews, bidirectional messaging, and admin tools for category moderation and provider verification.</li>
+          <li><strong>Technical Complexity:</strong> Engineered search combining MySQL full-text matching with location filters, driving real-time messaging using private broadcast authorization channels for message isolation.</li>
+          <li><strong>Security:</strong> Implemented Laravel Sanctum token auth, private channel authorization guards, role policies, database transactions for bookings, and strict validation blocking mass assignment.</li>
+          <li><strong>Performance &amp; Scalability:</strong> Optimized marketplace listing queries by selecting explicit columns, eager loading relations, and applying composite indexes, achieving API response time under 180ms and database query time under 35ms.</li>
+          <li><strong>Reliability &amp; Quality:</strong> Established structured error responses returning deterministic HTTP status codes, backed by transactional database operations and background queues processing notifications.</li>
+          <li><strong>Integrations:</strong> Integrated Firebase Cloud Messaging for mobile push delivery, Laravel Reverb WebSockets for instant chat broadcasting, and email services for transactional verification codes.</li>
+          <li><strong>DevOps &amp; Deployment:</strong> Automated production deployment on CloudPanel VPS using GitHub Actions, configuring Nginx reverse proxy rules, SSL certificates, and background queue workers.</li>
         </ul>
       </div>
 
@@ -536,10 +552,14 @@
         </div>
         <div class="project-summary">Direct-to-consumer luxury vacation rental booking platform with dynamic seasonal rate calculation</div>
         <ul>
-          <li><strong>Booking Engine &amp; Dynamic Rates:</strong> Built the vacation rental booking platform with real-time property availability calendars, custom seasonal rate calculation matrices, Google Maps location search, and Stripe payment processing across 35 migrations.</li>
-          <li><strong>Legacy Database Migration:</strong> Developed a data import pipeline that cleaned, normalized, and imported 193,000+ lines of legacy VRS7 SQL databases into a modern relational schema with zero data loss.</li>
-          <li><strong>Availability Search Optimization:</strong> Tuned date-range availability and pricing queries using database indexes and Redis caching, achieving 35ms database query latency and under 180ms p95 API response latency.</li>
-          <li><strong>Production Environment:</strong> Configured and maintained the cPanel hosting environment, setting up automated database backups, transactional email deliverability, and Nginx reverse proxy rules.</li>
+          <li><strong>Architecture &amp; Design:</strong> Architected modular MVC reservation system using dedicated pricing services, search services, and form requests separating controllers from reservation rules.</li>
+          <li><strong>Features &amp; Functionality:</strong> Built property searching, date-range availability calendars, reservation checkouts, customer accounts, and administrative controls for seasonal rates, amenities, and booking moderation.</li>
+          <li><strong>Technical Complexity:</strong> Engineered day-by-day seasonal rate calculation matrix factoring date ranges, weekend pricing, minimum stays, guest surcharges, and discounts, plus an automated legacy SQL schema importer.</li>
+          <li><strong>Security:</strong> Implemented token-based session authentication, Stripe payment intent processing, database transactions on reservation creation preventing double-booking, and strict input validation.</li>
+          <li><strong>Performance &amp; Scalability:</strong> Optimized property calendar lookups and search filtering using composite database indexes and Redis query caching, achieving 35ms database query latency and under 180ms p95 API response latency.</li>
+          <li><strong>Reliability &amp; Quality:</strong> Implemented transactional booking operations with rollback safety, centralized exception logging, and graceful error handling on payment gateway disruptions.</li>
+          <li><strong>Integrations:</strong> Integrated Stripe payment gateway for reservation checkouts, Google Maps geocoding APIs for location searches, and transactional email deliverability services.</li>
+          <li><strong>DevOps &amp; Deployment:</strong> Configured cPanel hosting environment with automated database backups, transactional mail, and Nginx reverse proxy directives.</li>
         </ul>
       </div>
     </section>
